@@ -12,7 +12,10 @@ script:
 
   # Tagging
   - echo "Tagging Docker image"
-  - docker tag udagram-api-feed:v3 $DOCKER_USERNAME/udagram-api-feed:v3  - docker tag udagram-api-user:v3 $DOCKER_USERNAME/udagram-api-user:v3  - docker tag udagram-frontend:v3 $DOCKER_USERNAME/udagram-frontend:v3  - docker tag udagram-reverse-proxy:v3 $DOCKER_USERNAME/udagram-reverse-proxy:v3
+  - docker tag udagram-api-feed:v3 $DOCKER_USERNAME/udagram-api-feed:v3  
+  - docker tag udagram-api-user:v3 $DOCKER_USERNAME/udagram-api-user:v3  
+  - docker tag udagram-frontend:v3 $DOCKER_USERNAME/udagram-frontend:v3
+  - docker tag udagram-reverse-proxy:v3 $DOCKER_USERNAME/udagram-reverse-proxy:v3
   - echo "Docker images ls"
   - docker images ls
 
@@ -22,4 +25,7 @@ after_success:
   - echo "____LOGIN DOCKER____"
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   - echo "____PUSH DOCKER IMAGES____"
-  - docker push $DOCKER_USERNAME/udagram-api-feed:v3  - docker push $DOCKER_USERNAME/udagram-api-user:v3  - docker push $DOCKER_USERNAME/udagram-frontend:v3  - docker push $DOCKER_USERNAME/udagram-reverse-proxy:v3  
+  - docker push $DOCKER_USERNAME/udagram-api-feed:v3
+  - docker push $DOCKER_USERNAME/udagram-api-user:v3  
+  - docker push $DOCKER_USERNAME/udagram-frontend:v3  
+  - docker push $DOCKER_USERNAME/udagram-reverse-proxy:v3  
