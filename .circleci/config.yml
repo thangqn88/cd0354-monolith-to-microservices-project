@@ -21,14 +21,14 @@ jobs:
             docker build -t udagram-api-feed:v3 ./udagram-api-feed
             docker build -t udagram-api-user:v3 ./udagram-api-user
             docker build -t udagram-frontend:v3 ./udagram-frontend
-            docker build -t udagram-reverse-proxy:v3 ./udagram-reverse-proxy
+            docker build -t reverseproxy:v3 ./udagram-reverseproxy
 
             # tagging
             echo "Tagging Docker image"
             docker tag udagram-api-feed:v3 $DOCKER_USERNAME/udagram-api-feed:v3
             docker tag udagram-api-user:v3 $DOCKER_USERNAME/udagram-api-user:v3
             docker tag udagram-frontend:v3 $DOCKER_USERNAME/udagram-frontend:v3
-            docker tag udagram-reverse-proxy:v3 $DOCKER_USERNAME/udagram-reverse-proxy:v3
+            docker tag udagram-reverseproxy:v3 $DOCKER_USERNAME/reverseproxy:v3
 
             echo "Docker images ls"
             docker images ls
