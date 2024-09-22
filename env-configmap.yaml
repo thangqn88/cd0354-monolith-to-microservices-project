@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-secret
+data:
+  POSTGRES_HOST: imagefilterdb.cbu42brsbovl.us-east-1.rds.amazonaws.com
+  POSTGRES_DB: imagefilterdb
+  AWS_BUCKET: arn:aws:s3:::thangqn-udacity-project3
+  AWS_PROFILE: default
+  AWS_REGION: us-east-1
+  JWT_SECRET: testing
+  URL: http://localhost:8100
