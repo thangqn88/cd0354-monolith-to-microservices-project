@@ -18,6 +18,11 @@ spec:
         - name: frontend
           image: thangqn88/udagram-frontend:v7
           imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: "250m"
+            limits:
+              cpu: "500m"
           ports:
             - containerPort: 80
           envFrom:
